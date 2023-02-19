@@ -1,3 +1,4 @@
+import 'package:codigo3_app_ui/widgets/item_slider_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -186,6 +187,49 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
+                  children: const [
+                    Text(
+                      "Hot places",
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    Text(
+                      "SEE ALL",
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.blue,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 12.0,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      ItemSliderWidget(),
+                      ItemSliderWidget(),
+                      ItemSliderWidget(),
+                      ItemSliderWidget(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
