@@ -1,3 +1,4 @@
+import 'package:codigo3_app_ui/pages/detail_page.dart';
 import 'package:codigo3_app_ui/widgets/item_slider_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -220,10 +221,30 @@ class HomePage extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      ItemSliderWidget(),
-                      ItemSliderWidget(),
-                      ItemSliderWidget(),
-                      ItemSliderWidget(),
+                      ItemSliderWidget(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailPage()));
+                        },
+                      ),
+                      ItemSliderWidget(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailPage()));
+                        },
+                      ),
+                      ItemSliderWidget(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailPage()));
+                        },
+                      ),
                     ],
                   ),
                 ),
